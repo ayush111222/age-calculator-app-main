@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="app.js" defer></script>
+  
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+
+ <main>
+  <div class="container">
+    <div class="wrapper">
+      <form action="" class="age-calc-form">
+       <div class="wrapper-form">
+        <div class="form-inputs">
+          <label for="days">Day</label>
+          <input type="text" id="days" placeholder="DD" minlength="2" maxlength="2">
+          <div class="error-msg"></div>
+        </div>
+
+        <div class="form-inputs">
+          <label for="months">Month</label>
+          <input type="text" id="months" placeholder="MM" minlength="2" maxlength="2">
+          <div class="error-msg"></div>
+        </div>
+        
+        <div class="form-inputs">
+          <label for="years">Year</label>
+          <input type="text" id="years" placeholder="YYYY" minlength="4" maxlength="4">
+          <div class="error-msg"></div>
+        </div>
+       </div>
+        
+        <div class="line">
+          <button class="btn" type="submit"><img src="assets/images/icon-arrow.svg" alt=""></button>
+        </div>
+      </form>
+
+
+      <div class="show-age">
+        <div class="box"><span id="show-years">--</span> years</div>
+        <div class="box"><span id="show-months">--</span> months</div>
+        <div class="box"><span id="show-days">--</span> days</div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    </div>
+  </div>
+ </main>
+  
+</body>
+</html>
