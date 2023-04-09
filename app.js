@@ -110,17 +110,25 @@ ageForm.addEventListener("submit", (e)=>{
     }
 
     if(momentObject._isValid === false){
-        errorMsg[0].textContent = "Must be a valid date";
-        inputs[0].style.borderColor = "hsl(0, 100%, 67%)";
-        labels[0].style.color = "hsl(0, 100%, 67%)";
-        inputs.forEach(element =>{
-            element.style.borderColor = "hsl(0, 100%, 67%)";
-        })
-        labels.forEach(element =>{
-            element.style.color = "hsl(0, 100%, 67%)";
-        })
-        e.preventDefault();
-        return false;
+        if(inputDate.value === ""){
+            errorMsg[0].textContent = "This field is required";
+            inputs[0].style.borderColor = "hsl(0, 100%, 67%)";
+            labels[0].style.color = "hsl(0, 100%, 67%)";
+            e.preventDefault();
+            return false;
+        }else{
+            errorMsg[0].textContent = "Must be a valid date";
+            inputs[0].style.borderColor = "hsl(0, 100%, 67%)";
+            labels[0].style.color = "hsl(0, 100%, 67%)";
+            inputs.forEach(element =>{
+                element.style.borderColor = "hsl(0, 100%, 67%)";
+            })
+            labels.forEach(element =>{
+                element.style.color = "hsl(0, 100%, 67%)";
+            })
+            e.preventDefault();
+            return false;
+        }
     }
     if(inputDate.value > day){
         day = day + months[month - 1];
